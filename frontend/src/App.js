@@ -136,8 +136,6 @@ const Hero = () => {
           <div className="hero-kicker">
             <span className="status-dot" />
             <span>ANJANA SARA ABRAHAM</span>
-            <span className="kicker-line" />
-            <span>BUSINESS / TRANSFORMATION</span>
           </div>
           <h1 className="hero-heading" data-testid="hero-heading">
             <span className="hero-line"><span>Turning Business</span></span>
@@ -260,7 +258,7 @@ const experienceItems = [
     id: "sfo-technologies",
     role: "Engineer Trainee",
     company: "SFO Technologies Pvt. Ltd.",
-    period: "April 2023 – May 2024",
+    period: "APRIL 2023 - APRIL 2024",
     summary: "Balancing quality, coordination and process awareness on the shop floor to support dependable delivery.",
     bullets: [
       "Achieved 99% first-pass quality and contributed to a 20% increase in order volume.",
@@ -512,7 +510,7 @@ const Skills = () => (
 
 const educationItems = [
   { degree: "PGCM", school: "Great Lakes Institute of Management, Gurgaon", detail: "Pursuing, 2027" },
-  { degree: "B.Tech. (EEE)", school: "Rajagiri School of Engineering & Technology", detail: "73.4%, 2022" },
+  { degree: "B.Tech. (EEE)", school: "Rajagiri School of Engineering & Technology", detail: "73.5%, 2022" },
   { degree: "12th", school: "Vidyodaya School", detail: "81.8%, 2017" },
   { degree: "10th", school: "Vidyodaya School", detail: "10/10, 2015" },
 ];

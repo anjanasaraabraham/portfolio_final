@@ -36,6 +36,8 @@ Create and refine a premium, modern, responsive single-page portfolio for Anjana
 - Added My Resume linked to the supplied PDF and clear View Project buttons for Musafir and SPMS, with SPMS now pointing to the approved GitHub Pages project URL
 - Tightened vertical section pacing, moved Musafir and SPMS into equal columns, and made Bayer a separate full-width live-project spotlight
 - Updated Hero and About copy to first person
+- Removed the extra Hero kicker divider and category spans
+- Corrected the SFO experience period to APRIL 2023 - APRIL 2024 and the B.Tech. result to 73.5%, 2022
 - Removed the Hero visual header, coordinate labels and footer metadata so the uploaded profile photo remains a plain box
 
 ## Verification
