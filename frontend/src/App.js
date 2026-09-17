@@ -133,10 +133,6 @@ const Hero = () => {
     <section id="home" className="hero section-shell" data-testid="hero-section">
       <div className="hero-inner">
         <div className="hero-copy">
-          <div className="hero-kicker">
-            <span className="status-dot" />
-            <span>ANJANA SARA ABRAHAM</span>
-          </div>
           <h1 className="hero-heading" data-testid="hero-heading">
             <span className="hero-line"><span>Turning Business</span></span>
             <span className="hero-line"><span>Problems into</span></span>

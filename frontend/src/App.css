@@ -8,7 +8,7 @@
   inset: 0 0 auto;
   z-index: 100;
   height: 76px;
-  background: rgba(18, 25, 41, 0.97);
+  background: rgba(27, 41, 66, 0.97);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(18px);
 }
@@ -45,9 +45,10 @@
 
 .brand-name {
   color: var(--ink);
-  font-size: 14px;
+  font-size: clamp(14px, 2.45vw, 35px);
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.06em;
+  line-height: 1;
   white-space: nowrap;
 }
 
@@ -332,7 +333,7 @@
   overflow: clip;
   color: rgba(20, 184, 166, 0.55);
   border: 1px solid rgba(20, 184, 166, 0.35);
-  background: #19253d;
+  background: #243654;
   box-shadow: 24px 24px 0 rgba(20, 184, 166, 0.06), 0 35px 70px rgba(0, 0, 0, 0.25);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -557,7 +558,7 @@
   overflow: hidden;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  background: rgba(14, 22, 38, 0.78);
+  background: rgba(31, 48, 75, 0.82);
 }
 
 .marquee-track {
@@ -591,7 +592,7 @@
 .section-tint {
   width: 100%;
   max-width: none;
-  background: #152034;
+  background: #1f304b;
 }
 
 .section-tint > .section-structure,
@@ -753,7 +754,7 @@
   padding: 15px;
   color: var(--ink);
   border: 1px solid var(--soft-border);
-  background: rgba(14, 22, 38, 0.72);
+  background: rgba(27, 41, 66, 0.72);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.07em;
@@ -922,7 +923,7 @@
   grid-column: 1 / -1;
   padding: clamp(28px, 4vw, 48px);
   border-color: rgba(20, 184, 166, 0.55);
-  background: linear-gradient(115deg, #112238 0%, #0e1626 62%, #131b2c 100%);
+  background: linear-gradient(115deg, #263e62 0%, #243654 62%, #2a456d 100%);
   box-shadow: inset 0 3px 0 var(--accent);
 }
 
@@ -999,7 +1000,7 @@
   margin-top: 31px;
   padding: 15px;
   border: 1px solid rgba(20, 184, 166, 0.22);
-  background: rgba(9, 13, 22, 0.38);
+  background: rgba(27, 41, 66, 0.48);
 }
 
 .flow-step-wrap {
@@ -1268,7 +1269,7 @@
   max-width: none;
   padding-top: 76px;
   padding-bottom: 76px;
-  background: #152034;
+  background: #1f304b;
 }
 
 .contact-grid {
@@ -1304,7 +1305,7 @@
 .contact-card {
   padding: 28px;
   border: 1px solid rgba(20, 184, 166, 0.42);
-  background: #0a111f;
+  background: #1b2942;
   box-shadow: 16px 16px 0 rgba(20, 184, 166, 0.07);
 }
 
@@ -1356,7 +1357,7 @@
 
 .site-footer {
   width: 100%;
-  background: #0f1728;
+  background: #19263d;
   border-top: 1px solid var(--border);
 }
 
@@ -1488,7 +1489,7 @@
     max-height: 0;
     overflow: clip;
     padding: 0 26px;
-    background: rgba(9, 13, 22, 0.99);
+    background: rgba(27, 41, 66, 0.99);
     border-bottom: 1px solid transparent;
     transition: max-height 0.35s ease, padding 0.35s ease, border-color 0.35s ease;
   }
