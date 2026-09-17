@@ -1,419 +1,338 @@
 {
-  "project_name": "Anjana Sara Abraham - Business Analysis & Transformation Portfolio Refinement",
-  "design_version": "2026.2-refined",
-  "design_archetype": "The Old Money Tech & Editorial Strategic Director",
-  "theme": "Deep Navy Dark Editorial & Tactical Consulting Precision",
-  "summary": "Actionable, high-fidelity visual guidelines for refining Anjana Sara Abraham's portfolio. Preserves the authentic consulting aesthetic (deep obsidian-navy, Playfair Display + IBM Plex Sans, restrained teal/lavender/warm accents, asymmetric sticky rail, coordinate grid, and strict truth in data) while implementing five critical refinements: (1) uploaded professional portrait in the Hero profile panel only with deliberate crop; (2) reduced vertical gaps while maintaining editorial breathing room; (3) Musafir and SPMS side-by-side as two equal project cards; (4) Bayer as a separate, more prominent ongoing live-project spotlight; (5) prominent 'My Resume' hero action; (6) first-person narrative voice throughout Hero and About.",
-
-  "core_requested_edits": {
-    "1_hero_profile_portrait": {
-      "placement": "Hero profile panel only (replacing the placeholder poster monogram in .hero-visual while preserving the coordinate grid backdrop and metadata stamps).",
-      "rules": [
-        "Do NOT use stock photography personas elsewhere in the portfolio.",
-        "Apply a premium deliberate crop: container aspect-ratio ~4:5 or 3:4, object-cover with object-position: center top (focus on face & shoulders).",
-        "Encase portrait in a refined 1px border (border-white/20 with subtle teal ambient glow shadow-[0_16px_36px_rgba(0,0,0,0.4)]).",
-        "Include elegant lower third scrim / badge overlay with 'ASA • ANJANA SARA ABRAHAM' and 'Business Analysis / Transformation' label.",
-        "Maintain the surrounding coordinate grid, tactical stamps ('PROFILE / 01', 'SYSTEMS THINKING', 'DATA / 03', 'DECISION / 07', 'ACTION / 12')."
-      ],
-      "component_target": "/app/frontend/src/App.js -> <Hero /> component -> .portrait-poster container",
-      "data_testid": "hero-profile-portrait-image"
-    },
-    "2_vertical_gap_reduction": {
-      "problem": "Current padding (146px - 170px vertical) creates excessive dead space and forces unnecessary scrolling between dense analytical content blocks.",
-      "solution": "Calibrate section padding to an intentional editorial standard (py-16 to py-20 / 72px-90px on desktop, 48px-60px on mobile).",
-      "spacing_scale_overrides": {
-        "section_shell_desktop": "padding: 82px 7vw (reduced from 146px 7vw)",
-        "section_shell_mobile": "padding: 56px 19px (reduced from 94px 19px)",
-        "hero_padding_top": "padding-top: 118px (reduced from 170px)",
-        "hero_padding_bottom": "padding-bottom: 48px (reduced from 80px)",
-        "contact_section_padding": "padding: 96px 7vw (reduced from 165px)",
-        "about_grid_padding_top": "padding-top: 36px (reduced from 64px)",
-        "experience_list_padding_top": "padding-top: 36px (reduced from 62px)",
-        "projects_padding_top": "padding-top: 24px (reduced from 28px)",
-        "skills_padding_top": "padding-top: 36px (reduced from 62px)",
-        "education_grid_padding_top": "padding-top: 36px (reduced from 62px)",
-        "achievements_grid_padding_top": "padding-top: 36px (reduced from 62px)",
-        "hero_metrics_margin_top": "margin-top: 48px (reduced from 76px)",
-        "sticky_rail_top": "top: 96px (sticky offset aligned with reduced header/section rhythm)"
-      }
-    },
-    "3_project_cards_layout": {
-      "structure": "Asymmetric 2-tier layout: 2 equal side-by-side case study cards (Musafir & SPMS) + 1 prominent ongoing live project banner (Bayer).",
-      "musafir_and_spms_layout": {
-        "container_grid": "grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch",
-        "card_styling": "Equal 50/50 flex/grid columns with matching height, 1px border-white/10, surface bg #0E1626, hover lift (-translate-y-1), and identical typography hierarchy.",
-        "musafir_spec": {
-          "number": "01",
-          "title": "MUSAFIR",
-          "subtitle": "Tourism Analytics Project",
-          "tags": ["Data Analytics", "Strategy", "K-Means Clustering"],
-          "flow_steps": ["DATA", "INSIGHT", "STRATEGY"],
-          "key_finding": "Accessibility and safety were the strongest significant predictors of tourism popularity across 100 destinations.",
-          "takeaway": "Uses analytics to make better tourism investment and destination-development decisions."
-        },
-        "spms_spec": {
-          "number": "02",
-          "title": "STUDENT PARCEL MANAGEMENT SYSTEM",
-          "subtitle": "Process Design / Digital Transformation / Lean Management",
-          "tags": ["Process Design", "Digital Transformation", "Lean Operations"],
-          "flow_steps": ["PROBLEM", "REDESIGN", "DIGITALIZE", "EFFICIENCY"],
-          "key_finding": "Physical ledgers, unstructured storage, 10–15+ minute search times, and congestion created the case for change.",
-          "takeaway": "Uses process redesign and digitalization to make a campus service operation faster, standardized and more efficient."
-        }
-      },
-      "bayer_prominent_treatment": {
-        "placement": "Separate dedicated full-width spotlight block situated prominently in the Projects section (either crowning the section or positioned as the culminating live initiative).",
-        "styling": {
-          "wrapper": "col-span-full mt-6 p-8 lg:p-10 border border-teal-400/40 bg-gradient-to-br from-[#101C30] via-[#0E1626] to-[#0A1220] shadow-[0_12px_40px_rgba(20,184,166,0.08)] rounded-none relative overflow-hidden",
-          "badge": "bg-teal-400/15 border border-teal-400/40 text-teal-300 font-bold tracking-widest text-[10px] uppercase px-3 py-1 inline-flex items-center gap-2",
-          "live_indicator": "Pulsing teal status dot + 'ONGOING LIVE PROJECT' tag",
-          "title_size": "text-2xl sm:text-3xl lg:text-4xl font-serif text-[#F3E8DC]",
-          "flow_steps": ["LISTEN", "ANALYZE", "RECOMMEND"],
-          "flow_styling": "Expanded visual process pipeline with distinct step nodes and subtle arrows",
-          "finding_callout": "CURRENT FOCUS: Analyzing stakeholder needs and sustainability practices to identify process gaps; developing data-driven recommendations and metrics for sustainable adoption. (Outcomes intentionally in progress).",
-          "accent_corner_stamp": "TOP-RIGHT BADGE: 'LIVE TRANSFORMATION CASE • 2026'"
-        }
-      }
-    },
-    "4_hero_resume_action": {
-      "action_type": "Prominent 'My Resume' action integrated into hero CTA group alongside 'View My Work' and 'Let's Connect'.",
-      "visual_hierarchy": "Equal prominence button with distinct icon (FileText or ArrowDownToLine), clean pill-border styling with high hover contrast.",
-      "button_styling": "button button-resume: border border-teal-400/60 bg-teal-400/10 text-[#F3E8DC] hover:bg-teal-400 hover:text-[#090D16] transition-all",
-      "target_href": "#contact (or direct CV modal/download anchor with fallback alert)",
-      "data_testid": "hero-resume-button"
-    },
-    "5_first_person_narrative": {
-      "rule": "Convert all biographical introductory statements from third-person ('Anjana Sara Abraham is...') to first-person ('I am... / My work...') across Hero and About sections.",
-      "hero_intro_text": "I am an impact-oriented professional skilled in business analysis, requirements gathering and stakeholder management, with strong analytical abilities to translate business needs into actionable solutions and support technology-enabled transformation.",
-      "about_summary_text": "I am an engineering graduate and PGCM candidate at Great Lakes Institute of Management, Gurgaon. My work sits at the intersection of business analysis, requirements gathering, process improvement, stakeholder management, analytics, and technology-enabled transformation.",
-      "about_body_second_paragraph": "I bring structure to ambiguous problems: listening to what a business needs, mapping how work happens today, finding the friction, and shaping a solution that moves smoothly from conversation to implementation."
-    }
-  },
-
-  "colors": {
-    "palette_name": "Deep Obsidian Navy Editorial & Tactical Accents",
-    "background_primary": "#090D16",
-    "background_surface": "#0E1626",
-    "background_surface_elevated": "#121C2F",
-    "background_section_tint": "#0B111E",
-    "text_primary_warm_ink": "#F3E8DC",
-    "text_secondary_slate": "#C1C9D6",
-    "text_muted": "#94A3B8",
-    "accent_precision_teal": "#14B8A6",
-    "accent_teal_glow": "rgba(20, 184, 166, 0.15)",
-    "accent_editorial_lavender": "#DDD6FE",
-    "accent_strategic_blue": "#3B82F6",
-    "border_default": "rgba(255, 255, 255, 0.1)",
-    "border_subtle": "rgba(255, 255, 255, 0.07)",
-    "border_accent": "rgba(20, 184, 166, 0.35)",
-    "contrast_verification": {
-      "warm_ink_on_navy": "14.8:1 (Surpasses WCAG AAA)",
-      "teal_on_navy": "7.9:1 (WCAG AAA for graphics and text)",
-      "lavender_on_navy": "12.1:1 (WCAG AAA)",
-      "slate_on_navy": "5.6:1 (WCAG AA)"
-    },
-    "forbidden_colors": [
-      "#7351B7",
-      "#1B93A4",
-      "saturated full-screen rainbow gradients",
-      "vibrating lime neons"
+  "design_system_overview": {
+    "project_name": "Anjana Sara Abraham — Executive Portfolio Refinement",
+    "persona": "E1 Creative Designer — Editorial Consulting & Strategy Aesthetic",
+    "theme_mode": "Soft Navy-Blue Charcoal (Lighter than near-black, high legibility, refined editorial tone)",
+    "aesthetic_direction": "High-end management consulting / business transformation editorial dossier. Combines the typographic authority of classic Swiss/editorial publications (Playfair Display + IBM Plex Sans) with modern tactical coordinate grids, crisp card step surfaces, and teal-lavender accents.",
+    "core_design_goals": [
+      "Visibly lighten base background from heavy near-black (#090d16) to an airy, sophisticated soft navy-blue charcoal (#121929 / #131d31).",
+      "Establish distinct surface elevation steps (#19253d for cards, #152033 for section tints, #202f4b for active/hover states).",
+      "Increase header brand name typography from 10px to ~14px with refined letter-spacing and weight for executive presence.",
+      "Modestly compress oversized vertical section padding (from 100px/124px down to 68px-76px) and tame oversized clamp() headings (from 7rem down to 4rem-4.25rem) to reduce page scrolling friction while retaining editorial drama.",
+      "Strictly preserve all factual text, project URLs, PDF resume link, contact details, and plain uploaded portrait presentation."
     ]
   },
-
-  "typography": {
-    "pairing_strategy": "Editorial Classic Serif Headings + Sterile Analytical Sans Body",
-    "heading_font": {
-      "family": "Playfair Display",
-      "google_font": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap",
-      "css_fallback": "Georgia, serif",
-      "weights": ["400", "500", "600", "700"],
-      "tracking": "tracking-tight (-0.04em to -0.055em)"
+  "color_palette_and_css_variables": {
+    "theme_archetype": "Architectural Consulting & Refined Navy Slate",
+    "exact_css_variables": {
+      "--bg": "#121929",
+      "--surface": "#19253d",
+      "--surface-elevated": "#202f4d",
+      "--section-tint": "#152034",
+      "--header-bg": "rgba(18, 25, 41, 0.94)",
+      "--footer-bg": "#0e1422",
+      "--ink": "#f5ece1",
+      "--ink-secondary": "#cad4e2",
+      "--muted": "#94a3b8",
+      "--accent": "#14b8a6",
+      "--accent-hover": "#2dd4bf",
+      "--accent-dim": "rgba(20, 184, 166, 0.12)",
+      "--accent-border": "rgba(20, 184, 166, 0.38)",
+      "--lavender": "#ddd6fe",
+      "--lavender-dim": "rgba(221, 214, 254, 0.08)",
+      "--border": "rgba(255, 255, 255, 0.11)",
+      "--soft-border": "rgba(255, 255, 255, 0.07)"
     },
-    "body_font": {
-      "family": "IBM Plex Sans",
-      "css_fallback": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-      "weights": ["300", "400", "500", "600", "700"],
-      "line_height": "leading-relaxed (1.65 to 1.75)"
+    "tailwind_hsl_variables": {
+      "--background": "221 38% 12%",
+      "--foreground": "32 45% 92%",
+      "--card": "219 41% 17%",
+      "--card-foreground": "32 45% 92%",
+      "--popover": "219 41% 17%",
+      "--popover-foreground": "32 45% 92%",
+      "--primary": "172 80% 40%",
+      "--primary-foreground": "221 38% 12%",
+      "--secondary": "218 36% 22%",
+      "--secondary-foreground": "32 45% 92%",
+      "--muted": "218 36% 22%",
+      "--muted-foreground": "215 22% 68%",
+      "--accent": "172 80% 40%",
+      "--accent-foreground": "221 38% 12%",
+      "--border": "217 30% 28%",
+      "--input": "217 30% 28%",
+      "--ring": "172 80% 40%"
     },
-    "type_scale": {
-      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl font-serif font-normal text-[#F3E8DC] leading-[1.0] tracking-tighter",
-      "h2_section": "text-2xl sm:text-3xl lg:text-4xl font-serif font-medium text-[#F3E8DC] leading-[1.05] tracking-tight",
-      "h3_card": "text-xl sm:text-2xl font-serif font-medium text-[#F3E8DC] leading-snug",
-      "body_lead": "text-base sm:text-lg font-sans font-normal text-[#C1C9D6] leading-relaxed",
-      "body_regular": "text-sm sm:text-base font-sans font-normal text-[#C1C9D6] leading-relaxed",
-      "eyebrow_label": "text-[10px] sm:text-xs font-sans font-bold uppercase tracking-[0.18em] text-teal-400",
-      "rail_number": "text-3xl lg:text-4xl font-serif italic text-teal-400 leading-none",
-      "metric_number": "text-2xl sm:text-3xl lg:text-4xl font-serif font-medium text-[#F3E8DC]"
-    },
-    "banned_fonts": ["Inter for headings", "Roboto", "Open Sans", "Lato", "Space Grotesk"]
-  },
-
-  "layouts_and_grids": {
-    "master_structure": "Sticky Asymmetric Swiss Grid (158px Left Rail + 1fr Main Content Area)",
-    "container_max_width": "max-w-[1500px] mx-auto",
-    "desktop_grid_flow": {
-      "section_structure": "display: grid; grid-template-columns: 158px minmax(0, 1fr); gap: clamp(32px, 5vw, 78px); align-items: start;",
-      "section_rail": "position: sticky; top: 96px; display: flex; flex-direction: column; gap: 10px;",
-      "section_content": "min-width: 0; width: 100%;"
-    },
-    "mobile_grid_flow": {
-      "breakpoint": "max-width: 680px",
-      "section_structure": "display: block;",
-      "section_rail": "position: static; display: grid; grid-template-columns: auto auto 1fr; align-items: center; margin-bottom: 24px;"
-    },
-    "component_grids": {
-      "hero_layout": "grid-cols-1 lg:grid-cols-[1.12fr_0.88fr] gap-10 lg:gap-16 items-end",
-      "hero_metrics": "grid grid-cols-1 sm:grid-cols-3 gap-6 pt-5 border-t border-white/10",
-      "projects_musafir_spms": "grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch",
-      "projects_bayer_spotlight": "w-full col-span-full mt-6",
-      "experience_stack": "grid grid-cols-1 gap-5",
-      "skills_grid": "grid grid-cols-1 md:grid-cols-3 gap-5",
-      "education_grid": "grid grid-cols-1 lg:grid-cols-[1.22fr_0.78fr] gap-5",
-      "achievements_grid": "grid grid-cols-1 lg:grid-cols-[1.22fr_0.78fr] gap-5",
-      "contact_grid": "grid grid-cols-1 lg:grid-cols-[1fr_0.86fr] gap-12 lg:gap-20 items-end"
+    "surface_step_hierarchy": {
+      "level_0_page_canvas": "var(--bg) [#121929] — warm slate charcoal base replacing harsh black",
+      "level_1_section_tint": "var(--section-tint) [#152034] — alternate section backdrop for Experience, Skills, Achievements",
+      "level_2_card_surface": "var(--surface) [#19253d] — container background with 1px border var(--border)",
+      "level_3_elevated_interactive": "var(--surface-elevated) [#202f4d] — hovered cards, active pills, contact card accents",
+      "level_4_overlay_header": "var(--header-bg) [rgba(18, 25, 41, 0.94)] — sticky header with backdrop-filter blur(16px)"
     }
   },
-
-  "visual_enhancers": {
-    "coordinate_grid": "SVG background grid with animated trajectory nodes and dashed analytical vectors in Hero visual card.",
-    "tactical_labels": "Miniature high-contrast tags (e.g., 'DATA / 03', 'DECISION / 07', 'ACTION / 12') positioned as analytical coordinate callouts.",
-    "flow_diagrams": "Horizontal process pipelines with discrete step chips, teal lead icons, and slate connecting arrows.",
-    "status_pulses": "Live pulsating dot with radial glow for ongoing initiatives (Bayer live project, header status).",
-    "hairline_borders": "1px crisp borders using rgba(255, 255, 255, 0.08) to rgba(20, 184, 166, 0.35).",
-    "crystal_header": "Fixed header with backdrop-blur-xl (18px blur), 96% obsidian opacity, and 1px bottom border."
-  },
-
-  "motion_and_interactions": {
-    "hero_masked_lines": "Masked slide-up line-by-line heading reveal (0.95s cubic-bezier(0.16, 1, 0.3, 1))",
-    "scroll_reveals": "IntersectionObserver-driven translateY(24px) -> translateY(0) with staggered delays",
-    "pointer_parallax": "Subtle pointer parallax on Hero visual card (tilt ±1.8% max for tactical immersion)",
-    "marquee_ticker": "Slow 42s linear infinite continuous drift, contained with overflow:hidden and contain:paint to eliminate document horizontal scroll",
-    "card_hover": "transform: translateY(-4px); border-color: rgba(20, 184, 166, 0.55); box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);",
-    "reduced_motion": "Mandatory @media (prefers-reduced-motion: reduce) disabling transforms and marquee looping"
-  },
-
-  "image_urls": [
-    {
-      "category": "hero_profile_panel_portrait",
-      "image_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHBvcnRyYWl0JTIwY29ycG9yYXRlfGVufDB8fHx8MTc4ODM4NDU0OHww&ixlib=rb-4.1.0&q=85",
-      "description": "Crisp corporate business portrait of Anjana Sara Abraham. Used ONLY in the Hero profile panel.",
-      "placement": "Hero Profile Visual (.portrait-poster container)",
-      "alt_text": "Anjana Sara Abraham - Business Analysis and Transformation Professional",
-      "framing_instructions": "Crop to upper torso and face, object-fit: cover, object-position: center 20%, subtle 1px border, no heavy darkening filters."
+  "typography_hierarchy": {
+    "font_pairings": {
+      "headings_display": "'Playfair Display', Georgia, serif (Weights: 400, 500, 600, italic)",
+      "body_and_ui": "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif (Weights: 300, 400, 500, 600, 700)"
+    },
+    "font_size_scale_modifications": {
+      "header_brand_name": {
+        "previous_size": "10px",
+        "new_recommended_size": "14px (0.875rem)",
+        "weight": "600",
+        "letter_spacing": "0.12em",
+        "rationale": "Gives Anjana Sara Abraham's brand name clear executive prominence without overcrowding the header navigation items."
+      },
+      "hero_h1_display": {
+        "previous_size": "clamp(2.65rem, 6.4vw, 7rem)",
+        "new_recommended_size": "clamp(2.35rem, 4.75vw, 4.25rem)",
+        "line_height": "1.04",
+        "letter_spacing": "-0.04em",
+        "rationale": "Maintains commanding editorial presence while cutting ~40% off oversized vertical height so hero copy, portrait, metrics, and CTA fit comfortably above the fold on desktop."
+      },
+      "section_h2_headings": {
+        "previous_size": "clamp(2.25rem, 4.4vw, 5rem)",
+        "new_recommended_size": "clamp(1.85rem, 3.2vw, 3rem)",
+        "line_height": "1.08",
+        "letter_spacing": "-0.035em",
+        "rationale": "Prevents section titles from occupying multiple excessive vertical lines."
+      },
+      "contact_h2_heading": {
+        "previous_size": "clamp(2.8rem, 6.3vw, 7rem)",
+        "new_recommended_size": "clamp(2.2rem, 4.4vw, 3.8rem)",
+        "line_height": "1.02",
+        "letter_spacing": "-0.04em"
+      },
+      "card_h3_headings": {
+        "experience_and_projects": "clamp(1.35rem, 2.2vw, 2.1rem)",
+        "skills_h3": "17px (0.01em letter spacing, IBM Plex Sans 600 weight)"
+      },
+      "pull_quote": {
+        "previous_size": "clamp(1.65rem, 2.7vw, 2.65rem)",
+        "new_recommended_size": "clamp(1.35rem, 2.1vw, 1.95rem)",
+        "line_height": "1.2"
+      },
+      "body_copy": {
+        "size": "15px",
+        "line_height": "1.68",
+        "color": "var(--ink-secondary) [#cad4e2]"
+      },
+      "eyebrows_and_metadata": {
+        "size": "10px - 11px",
+        "letter_spacing": "0.15em - 0.18em",
+        "text_transform": "uppercase",
+        "weight": "700",
+        "color": "var(--accent)"
+      }
     }
+  },
+  "spacing_and_layout_reductions": {
+    "section_shell": {
+      "previous_desktop_padding": "100px 7vw",
+      "new_recommended_desktop_padding": "68px 7vw",
+      "previous_mobile_padding": "72px 19px",
+      "new_recommended_mobile_padding": "48px 18px",
+      "rationale": "Eliminates excessive empty vertical gaps between content sections, making the single-page dossier 25-30% more compact without feeling dense."
+    },
+    "hero_section": {
+      "previous_desktop_padding": "padding-top: 144px; padding-bottom: 64px; min-height: min(920px, 100vh);",
+      "new_recommended_desktop_padding": "padding-top: 112px; padding-bottom: 44px; min-height: auto;",
+      "hero_inner_gap": "clamp(32px, 5vw, 72px)",
+      "hero_metrics_margin_top": "36px (reduced from 54px)",
+      "hero_actions_margin_top": "24px (reduced from 34px)",
+      "hero_visual_min_height": "460px (reduced from 520px)"
+    },
+    "contact_section": {
+      "previous_desktop_padding": "124px 0",
+      "new_recommended_desktop_padding": "76px 0",
+      "contact_grid_gap": "clamp(36px, 6vw, 84px)"
+    },
+    "sub_grid_paddings": {
+      "experience_card_padding": "clamp(20px, 2.5vw, 30px)",
+      "project_card_padding": "clamp(22px, 2.6vw, 32px)",
+      "project_card_live_padding": "clamp(24px, 3vw, 36px)",
+      "skill_panel_padding": "22px",
+      "skill_panel_min_height": "250px (reduced from 300px)",
+      "education_ledger_padding": "22px",
+      "ledger_row_padding": "16px 0 (reduced from 22px 0)"
+    }
+  },
+  "component_guidelines": {
+    "SiteHeader": {
+      "component_path": "/app/frontend/src/App.js",
+      "css_target": ".site-header, .header-inner, .brand-name, .desktop-nav",
+      "guidelines": [
+        "Ensure header background is 'rgba(18, 25, 41, 0.94)' with backdrop-filter: blur(16px). NEVER transparent.",
+        "Set .brand-name font-size to 14px (0.875rem), font-weight: 600, color: var(--ink), letter-spacing: 0.12em.",
+        "Keep header height at 70px (compact from 76px).",
+        "Keep navigation items at 10.5px uppercase with hover transition to var(--accent).",
+        "Ensure data-testid='nav-brand-logo' and data-testid='main-header-nav' remain intact."
+      ]
+    },
+    "Hero": {
+      "component_path": "/app/frontend/src/App.js",
+      "css_target": ".hero, .hero-heading, .hero-visual, .portrait-poster, .hero-metrics",
+      "guidelines": [
+        "Portrait image (data-testid='profile-image'): MUST remain clean and plain with object-fit: cover, object-position: center 23%. DO NOT apply grayscale or blur filters.",
+        "Poster container (.portrait-poster): Keep 1px solid border (rgba(243, 232, 220, 0.45)), background: var(--surface).",
+        "Hero visual container (.hero-visual): Background #162137, 1px border rgba(20, 184, 166, 0.35), shadow: 16px 16px 0 rgba(20, 184, 166, 0.05).",
+        "Metric cards (.hero-metrics): Top border 1px solid var(--border), metrics numbers at clamp(1.65rem, 2.4vw, 2.4rem).",
+        "Resume and CTAs: Keep direct link to Anjana's PDF CV on Emergent CDN and '#projects' anchor button."
+      ]
+    },
+    "Marquee": {
+      "component_path": "/app/frontend/src/App.js",
+      "css_target": ".marquee-viewport, .marquee-track",
+      "guidelines": [
+        "Background: rgba(21, 32, 52, 0.85) with top and bottom borders 1px solid var(--border).",
+        "Padding: 14px 0 (reduced from 20px) to feel sleek and non-intrusive.",
+        "Color: rgba(221, 214, 254, 0.85), font-size: 10.5px, letter-spacing: 0.2em."
+      ]
+    },
+    "AboutSection": {
+      "component_path": "/app/frontend/src/App.js",
+      "css_target": "#about, .about-grid, .focus-list",
+      "guidelines": [
+        "Section structure with sticky left rail (01 / ABOUT) at 140px width.",
+        "Focus list items (Understand problem / Redesign process / Measure movement): Background rgba(25, 37, 61, 0.7), border 1px solid var(--soft-border), min-height: 90px."
+      ]
+    },
+    "ExperienceSection": {
+      "component_path": "/app/frontend/src/App.js",
+      "css_target": "#experience, .section-tint, .experience-card",
+      "guidelines": [
+        "Section background: var(--section-tint) [#152034].",
+        "Experience cards: Background var(--surface) [#19253d], border 1px solid var(--border). Hover state lifts -3px with border-color rgba(20, 184, 166, 0.5).",
+        "Preserve Zealogics IT Solutions and SFO Technologies content, metric pills (1,000+ parts, 25% faster resolution, 99% first-pass, 20+ workforce)."
+      ]
+    },
+    "ProjectsSection": {
+      "component_path": "/app/frontend/src/App.js",
+      "css_target": "#projects, .project-card, .project-card-live, .flow-diagram",
+      "guidelines": [
+        "Maintain 2-column grid for Musafir and SPMS, full-width banner for Bayer (Ongoing Live Project).",
+        "Live card styling (.project-card-live): Gradient background linear-gradient(115deg, #1b2d4b 0%, #17243c 60%, #1e2c46 100%), border-color rgba(20, 184, 166, 0.55).",
+        "Flow diagrams: Background rgba(18, 25, 41, 0.45), 1px border rgba(20, 184, 166, 0.22).",
+        "Keep project URLs active: Musafir (https://india-tourism-insights.ananya-pgpm27g.chatgpt.site/) and SPMS (https://anjanasaraabraham.github.io/SPMSProjectFinal/)."
+      ]
+    },
+    "SkillsSection": {
+      "component_path": "/app/frontend/src/App.js",
+      "css_target": "#skills, .skill-layout, .skill-panel",
+      "guidelines": [
+        "3-column layout on desktop, 2-column on tablet, 1-column on mobile.",
+        "Skill panel background: var(--surface) [#19253d], border: 1px solid var(--border).",
+        "Skill tag pills: Background rgba(255, 255, 255, 0.03), border rgba(255, 255, 255, 0.08), color #d1d9e6."
+      ]
+    },
+    "EducationAndAchievements": {
+      "component_path": "/app/frontend/src/App.js",
+      "css_target": "#education, #achievements, .education-ledger, .certification-panel, .achievement-column",
+      "guidelines": [
+        "Maintain clean ledger tabular aesthetics with border-bottom dividers.",
+        "Ledger row degrees in Playfair Display (var(--lavender)), schools in IBM Plex Sans, years/percentages in uppercase teal (var(--accent))."
+      ]
+    },
+    "ContactAndFooter": {
+      "component_path": "/app/frontend/src/App.js",
+      "css_target": "#contact, .contact-card, .site-footer",
+      "guidelines": [
+        "Contact section background: #152033 (soft navy charcoal).",
+        "Contact card background: #19253d with teal glow border (rgba(20, 184, 166, 0.42)) and offset box-shadow 12px 12px 0 rgba(20, 184, 166, 0.06).",
+        "Footer background: #0e1422, padding 22px 7vw, border-top 1px solid var(--border)."
+      ]
+    }
+  },
+  "responsive_safeguards": {
+    "breakpoints": {
+      "desktop_wide": "1500px max container width (width: min(100%, 1500px); margin: 0 auto;)",
+      "tablet_landscape": "max-width: 1180px — reduce padding to 5vw, desktop nav gap to 14px",
+      "tablet_portrait": "max-width: 960px — switch to mobile menu drawer, single column hero, 2-col skills",
+      "mobile": "max-width: 680px — stack rails inline, single column projects, 48px vertical section padding",
+      "small_mobile": "max-width: 420px — hero heading clamp floor 2.1rem, brand-name text wrapped smoothly"
+    },
+    "critical_safeguards": [
+      "Header text collision: brand-name set to white-space: nowrap with overflow ellipsis or flex-shrink-0.",
+      "No horizontal scroll: html overflow-x: hidden; body overflow-x: clip;",
+      "Touch targets: all nav links, buttons, and contact items have min-height 42px - 46px.",
+      "Contrast compliance: all body text has minimum 5.5:1 APCA/WCAG AA contrast against soft navy charcoal #121929."
+    ]
+  },
+  "required_testing_ids": [
+    "main-header-nav",
+    "nav-brand-logo",
+    "nav-home-link",
+    "nav-about-link",
+    "nav-experience-link",
+    "nav-projects-link",
+    "nav-skills-link",
+    "nav-education-link",
+    "nav-achievements-link",
+    "nav-contact-link",
+    "header-contact-link",
+    "mobile-menu-toggle",
+    "hero-section",
+    "hero-heading",
+    "hero-intro",
+    "hero-view-work-link",
+    "hero-resume-link",
+    "hero-connect-link",
+    "hero-visual",
+    "profile-image-slot",
+    "profile-image",
+    "hero-metrics",
+    "hero-metric-parts",
+    "hero-metric-resolution",
+    "hero-metric-quality",
+    "editorial-marquee-strip",
+    "about-section",
+    "about-heading",
+    "about-summary",
+    "about-focus-list",
+    "experience-section",
+    "experience-heading",
+    "experience-list",
+    "zealogics-metrics",
+    "zealogics-responsibilities",
+    "sfo-technologies-metrics",
+    "sfo-technologies-responsibilities",
+    "projects-section",
+    "projects-heading",
+    "project-list",
+    "project-card-musafir",
+    "project-tags-musafir",
+    "musafir-flow-diagram",
+    "project-finding-musafir",
+    "project-takeaway-musafir",
+    "musafir-view-project-link",
+    "project-card-spms",
+    "project-tags-spms",
+    "spms-flow-diagram",
+    "project-finding-spms",
+    "project-takeaway-spms",
+    "spms-view-project-link",
+    "project-card-bayer",
+    "project-tags-bayer",
+    "bayer-flow-diagram",
+    "project-finding-bayer",
+    "project-takeaway-bayer",
+    "skills-section",
+    "skills-heading",
+    "skills-list",
+    "education-section",
+    "education-heading",
+    "education-list",
+    "certification-list",
+    "achievements-section",
+    "achievements-heading",
+    "achievement-list",
+    "leadership-list",
+    "languages-list",
+    "contact-section",
+    "contact-heading",
+    "contact-email-link",
+    "contact-linkedin-link",
+    "email-me-button",
+    "linkedin-button",
+    "main-footer"
   ],
-
-  "component_structure_and_path_map": {
-    "app_shell": "/app/frontend/src/App.js",
-    "styles": "/app/frontend/src/App.css",
-    "global_css": "/app/frontend/src/index.css",
-    "components": [
-      { "name": "Header", "role": "Fixed Crystal Nav with ASA Monogram + Desktop Links + 'Let's talk' CTA + Mobile Drawer Toggle" },
-      { "name": "Hero", "role": "H1 Heading + First-Person Lead + 3 CTA Buttons (View My Work, My Resume, Let's Connect) + Visual Profile Panel with Portrait + 3 Key Metrics" },
-      { "name": "Marquee", "role": "Slow editorial domain ribbon (contained, no page overflow)" },
-      { "name": "About", "role": "First-Person Point of View + Core Focus Pillars (Understand Problem, Redesign Process, Measure Movement)" },
-      { "name": "Experience", "role": "Zealogics IT Solutions (1,000+ parts, 25% faster resolution) & SFO Technologies (99% quality, 20+ workforce)" },
-      { "name": "Projects", "role": "Side-by-side Musafir & SPMS cards + Dedicated Prominent Bayer Live-Project Spotlight" },
-      { "name": "Skills", "role": "3 Domain Panels: Business/Transformation, Delivery/Engagement, Analytics/Tools" },
-      { "name": "Education", "role": "Education Ledger (PGCM Great Lakes, B.Tech EEE) + Certifications Panel (Power BI, Management Consulting)" },
-      { "name": "Achievements", "role": "Achievements (Strategic Shutdown Prize) + Leadership + Verified Languages" },
-      { "name": "Contact", "role": "Direct email & LinkedIn line with one-click direct actions" },
-      { "name": "Footer", "role": "Editorial ASA Brand Mark + Domain metadata + Copyright" }
-    ]
-  },
-
-  "exact_verified_data_manifest": {
-    "note": "STRICT RULE: NO INVENTED CLIENTS, METRICS, DEGREES, OR AWARDS. ONLY USE AUTHORIZED FACTUAL DATA BELOW.",
-    "identity": {
-      "name": "Anjana Sara Abraham",
-      "monogram": "ASA",
-      "email": "anjanasaraabraham@gmail.com",
-      "linkedin": "https://www.linkedin.com/in/anjana-sara-abraham",
-      "primary_domains": "Business Analysis • Business Transformation • Analytics • Strategy"
-    },
-    "hero_metrics": [
-      { "value": "1,000+", "label": "product parts managed across locations" },
-      { "value": "25%", "label": "faster issue resolution through reporting" },
-      { "value": "99%", "label": "first-pass quality achieved" }
-    ],
-    "experience": [
-      {
-        "role": "Junior Engineer",
-        "company": "Zealogics IT Solutions Pvt. Ltd.",
-        "period": "May 2024 – May 2026",
-        "summary": "Connecting product lifecycle detail, client requirements and leadership visibility across a growing set of product parts.",
-        "bullets": [
-          "Managed EOL lifecycles for 1,000+ product parts across locations.",
-          "Led a client product development initiative from requirements gathering through deployment.",
-          "Developed leadership reports and actionable insights, reducing issue resolution time by 25%."
-        ],
-        "metrics": ["1,000+ parts", "25% faster resolution"]
-      },
-      {
-        "role": "Engineer Trainee",
-        "company": "SFO Technologies Pvt. Ltd.",
-        "period": "April 2023 – May 2024",
-        "summary": "Balancing quality, coordination and process awareness on the shop floor to support dependable delivery.",
-        "bullets": [
-          "Achieved 99% first-pass quality and contributed to a 20% increase in order volume.",
-          "Coordinated a 20+ member workforce.",
-          "Identified process gaps and contributed to process transformation initiatives."
-        ],
-        "metrics": ["99% first-pass", "20+ workforce"]
-      }
-    ],
-    "projects": [
-      {
-        "slug": "musafir",
-        "title": "MUSAFIR",
-        "subtitle": "Tourism Analytics Project",
-        "tags": ["Data Analytics", "Strategy"],
-        "description": "Data-driven analysis of 100 Indian tourist destinations using correlation, regression and K-means clustering to identify tourism drivers, destination clusters and opportunity gaps.",
-        "finding": "Accessibility and safety were the strongest significant predictors of tourism popularity.",
-        "takeaway": "Uses analytics to make better tourism investment and destination-development decisions.",
-        "flow": ["DATA", "INSIGHT", "STRATEGY"]
-      },
-      {
-        "slug": "spms",
-        "title": "STUDENT PARCEL MANAGEMENT SYSTEM",
-        "subtitle": "Process Design / Digital Transformation / Lean Management",
-        "tags": ["Process Design", "Digital Transformation", "Lean Management"],
-        "description": "Redesigns Great Lakes Gurgaon’s manual parcel-handling process into a standardized, digitally enabled system.",
-        "finding": "Physical ledgers, unstructured storage, 10–15+ minute search times, congestion and limited visibility created the case for change.",
-        "takeaway": "Uses process redesign and digitalization to make a campus service operation faster, standardized and more efficient.",
-        "flow": ["PROBLEM", "REDESIGN", "DIGITALIZE", "EFFICIENCY"]
-      },
-      {
-        "slug": "bayer",
-        "title": "BAYER",
-        "subtitle": "Sustainability Project",
-        "tags": ["Ongoing Live Project", "Stakeholder Needs", "Metrics"],
-        "description": "Analyzing stakeholder needs and sustainability practices to identify process gaps and improvement opportunities, while developing data-driven recommendations and metrics to support sustainable adoption and measurable impact.",
-        "finding": "The project is ongoing; outcomes are intentionally not stated here.",
-        "takeaway": "A live study in progress, focused on sustainable adoption and measurable impact.",
-        "flow": ["LISTEN", "ANALYZE", "RECOMMEND"]
-      }
-    ],
-    "education": [
-      { "degree": "PGCM", "school": "Great Lakes Institute of Management, Gurgaon", "detail": "Pursuing, 2027" },
-      { "degree": "B.Tech. (EEE)", "school": "Rajagiri School of Engineering & Technology", "detail": "73.4%, 2022" },
-      { "degree": "12th", "school": "Vidyodaya School", "detail": "81.8%, 2017" },
-      { "degree": "10th", "school": "Vidyodaya School", "detail": "10/10, 2015" }
-    ],
-    "certifications": [
-      "Business Analytics using Power BI — KOED, 2026",
-      "Management Consulting Leadership Program — Skilled Sapiens, 2026"
-    ],
-    "achievements": [
-      "First Prize — Strategic Shutdown, Great Lakes Institute of Management, 2026",
-      "Third Prize — Talent Evening, Great Lakes Institute of Management, 2026",
-      "Third Prize — Eastern Group Song, Intercollege Fest, 2022"
-    ],
-    "leadership": [
-      "Project Lead — Firmware Development, Zealogics IT Solutions, 2025",
-      "Volunteer — Inter College Fest, Rajagiri School of Engineering & Technology, 2022"
-    ],
-    "languages": ["English", "Hindi", "Malayalam"]
-  },
-
-  "testing_and_data_testids": {
-    "header_and_nav": [
-      "main-header-nav",
-      "nav-brand-logo",
-      "nav-home-link",
-      "nav-about-link",
-      "nav-experience-link",
-      "nav-projects-link",
-      "nav-skills-link",
-      "nav-education-link",
-      "nav-achievements-link",
-      "nav-contact-link",
-      "header-contact-link",
-      "mobile-menu-toggle"
-    ],
-    "hero_section": [
-      "hero-section",
-      "hero-heading",
-      "hero-intro",
-      "hero-view-work-link",
-      "hero-resume-button",
-      "hero-connect-link",
-      "hero-visual",
-      "hero-coordinate-grid",
-      "profile-image-slot",
-      "hero-metrics",
-      "hero-metric-parts",
-      "hero-metric-resolution",
-      "hero-metric-quality"
-    ],
-    "about_section": [
-      "about-section",
-      "about-heading",
-      "about-summary",
-      "about-focus-list"
-    ],
-    "experience_section": [
-      "experience-section",
-      "experience-heading",
-      "experience-list",
-      "zealogics-metrics",
-      "zealogics-responsibilities",
-      "sfo-technologies-metrics",
-      "sfo-technologies-responsibilities"
-    ],
-    "projects_section": [
-      "projects-section",
-      "projects-heading",
-      "project-list",
-      "project-card-musafir",
-      "musafir-flow-diagram",
-      "project-card-spms",
-      "spms-flow-diagram",
-      "project-card-bayer",
-      "bayer-flow-diagram"
-    ],
-    "skills_and_credentials": [
-      "skills-section",
-      "skills-heading",
-      "skills-list",
-      "education-section",
-      "education-heading",
-      "education-list",
-      "certification-list",
-      "achievements-section",
-      "achievements-heading",
-      "achievement-list",
-      "leadership-list",
-      "languages-list"
-    ],
-    "contact_and_footer": [
-      "contact-section",
-      "contact-heading",
-      "contact-email-link",
-      "contact-linkedin-link",
-      "email-me-button",
-      "linkedin-button",
-      "main-footer"
-    ]
-  },
-
-  "instructions_to_main_agent": [
-    "Read /app/design_guidelines.json completely before editing code.",
-    "Refine the existing App.js and App.css — do NOT rebuild from scratch and do NOT invent any fake corporate case studies, clients, degrees, or awards.",
-    "Edit 1 (Hero Portrait): Place the uploaded professional portrait in the Hero profile panel only (.portrait-poster inside .hero-visual). Apply a premium deliberate crop (aspect-ratio 4:5, object-cover, centered top). Keep the technical coordinate grid and metadata labels around it. Do NOT insert stock photos anywhere else.",
-    "Edit 2 (Vertical Gaps): Reduce excessive section paddings (from 146px/170px down to 82px desktop / 56px mobile) and internal module tops (from 62px down to 36px) while preserving clear editorial breathing room and the sticky left rail rhythm.",
-    "Edit 3 (Projects Layout): In the Projects section, place Musafir and SPMS side-by-side as two equal project cards (grid-cols-1 md:grid-cols-2). Give Bayer a separate, more prominent ongoing live-project spotlight card (full width, pulsing live indicator, distinct gradient elevation, 'LISTEN → ANALYZE → RECOMMEND' flow).",
-    "Edit 4 (Hero Resume CTA): Add a prominent 'My Resume' action in the Hero actions button group (alongside 'View My Work' and 'Let's Connect') with data-testid='hero-resume-button'.",
-    "Edit 5 (First-Person Copy): Update all biographical text in the Hero intro and About section to first-person ('I am an impact-oriented professional...', 'My work sits at the intersection...', 'I bring structure...').",
-    "Ensure the marquee ticker has zero horizontal page overflow (contain: paint, overflow: hidden on .marquee-viewport).",
-    "Preserve all data-testid attributes exactly as specified to ensure test suites pass without breaking."
-  ],
-
   "UNIVERSAL GUIDELINES FOR MAIN AGENT": {
-    "avoid_ai_slop": "Do not center-align the app container. Maintain the authentic asymmetric Swiss layout with sticky left rail and crisp hairline borders.",
-    "transitions": "Never use 'transition: all'. Explicitly specify transitions like 'transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease'.",
-    "color_contrast": "Ensure every text string meets WCAG AA standards. Always set explicit hover text colors (e.g., hover:bg-teal-400 hover:text-slate-950).",
-    "no_assistant_emojis": "Never use AI assistant emojis (🤖🧠💭💡🔮) for icons. Use Lucide icons (FileText, ArrowUpRight, Activity, Database, Workflow, Target, etc.).",
-    "truth_in_data": "Preserve Anjana's exact career history, projects, metrics, and certifications without embellishment or fictional client names."
+    "do_not_write_generic_code": "Preserve the bespoke editorial identity of the portfolio. Avoid turning it into generic blue corporate templates.",
+    "preserve_all_content": "Do NOT alter or remove any biographical facts, metrics, education records, achievements, or external links.",
+    "keep_portrait_unaltered": "The portrait image at URL 'https://customer-assets-m6fa6gv7.emergentagent.net/job_anjana-insights/artifacts/4vgqy68z_WhatsApp%20Image%202026-08-04%20at%2012.54.06%20AM%20%281%29.webp' MUST remain plain and unedited.",
+    "color_discipline": "Ensure soft navy charcoal (#121929) replaces old pitch navy (#090d16). Ensure surface contrast is crisp (#19253d cards, #152034 section tints).",
+    "header_typography": "Brand name must be ~14px with font-weight 600.",
+    "spacing_discipline": "Section shell padding reduced from 100px to ~68px-72px; contact padding reduced from 124px to ~76px-80px; hero heading clamp reduced from 7rem to ~4.25rem.",
+    "javascript_stack": "Project uses JavaScript (.js, .jsx), not TypeScript (.tsx)."
   }
 }

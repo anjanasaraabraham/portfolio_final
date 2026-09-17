@@ -34,6 +34,7 @@ Create and refine a premium, modern, responsive single-page portfolio for Anjana
 - Added award-oriented dark editorial typography using Playfair Display and IBM Plex Sans
 - Replaced the previous identity treatment with Anjana’s uploaded portrait in a simple bordered Hero box with no overlay text or labels
 - Added My Resume linked to the supplied PDF and clear View Project buttons for Musafir and SPMS, with SPMS now pointing to the approved GitHub Pages project URL
+- Updated My Resume to the newly uploaded P2622009_GLIM-G.pdf, enlarged the header name to 14px, shifted the palette to soft navy-blue charcoal, and reduced spacing and display scale for a shorter page
 - Tightened vertical section pacing, moved Musafir and SPMS into equal columns, and made Bayer a separate full-width live-project spotlight
 - Updated Hero and About copy to first person
 - Removed the extra Hero kicker divider and category spans

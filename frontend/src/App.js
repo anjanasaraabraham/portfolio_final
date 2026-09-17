@@ -156,7 +156,7 @@ const Hero = () => {
             <a className="button button-primary" href="#projects" data-testid="hero-view-work-link">
               View My Work <ArrowUpRight size={16} />
             </a>
-            <a className="button button-resume" href="https://customer-assets-m6fa6gv7.emergentagent.net/job_anjana-insights/artifacts/ebzlqqqg_Anjana%20Sara%20CV%20Accenture%20ATCI%20CL10.pdf" target="_blank" rel="noreferrer" data-testid="hero-resume-link">
+            <a className="button button-resume" href="https://customer-assets-m6fa6gv7.emergentagent.net/job_anjana-insights/artifacts/0qk9rvk5_P2622009_GLIM-G.pdf" target="_blank" rel="noreferrer" data-testid="hero-resume-link">
               My Resume <ExternalLink size={16} />
             </a>
             <a className="button button-ghost" href="#contact" data-testid="hero-connect-link">
