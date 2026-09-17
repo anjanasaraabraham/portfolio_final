@@ -412,7 +412,7 @@ const ProjectCard = ({ project, featured = false, live = false }) => (
       )}
       {project.slug === "spms" && (
         <div className="project-actions">
-          <a className="project-link-button" href="https://spms-inventory-hub.emergent.host/login" target="_blank" rel="noreferrer" data-testid="spms-view-project-link">
+          <a className="project-link-button" href="https://anjanasaraabraham.github.io/SPMSProjectFinal/" target="_blank" rel="noreferrer" data-testid="spms-view-project-link">
             View Project <ExternalLink size={16} />
           </a>
         </div>
