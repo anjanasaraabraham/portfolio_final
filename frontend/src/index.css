@@ -5,13 +5,13 @@
 @tailwind utilities;
 
 :root {
-  --bg: #090d16;
-  --surface: #0e1626;
-  --ink: #f3e8dc;
-  --muted: #94a3b8;
+  --bg: #1b2942;
+  --surface: #243654;
+  --ink: #f5eee4;
+  --muted: #b3bfd2;
   --accent: #14b8a6;
-  --border: rgba(255, 255, 255, 0.1);
-  --soft-border: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.16);
+  --soft-border: rgba(255, 255, 255, 0.11);
   --lavender: #ddd6fe;
   --blue: #3b82f6;
 }

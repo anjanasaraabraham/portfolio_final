@@ -33,9 +33,13 @@ Create and refine a premium, modern, responsive single-page portfolio for Anjana
 - Added scroll reveals, pointer-based hero parallax, smooth anchor scrolling and a mobile navigation panel without using framer-motion
 - Added award-oriented dark editorial typography using Playfair Display and IBM Plex Sans
 - Replaced the previous identity treatment with Anjana’s uploaded portrait in a simple bordered Hero box with no overlay text or labels
-- Added My Resume linked to the supplied PDF and clear View Project buttons for Musafir and SPMS
+- Added My Resume linked to the supplied PDF and clear View Project buttons for Musafir and SPMS, with SPMS now pointing to the approved GitHub Pages project URL
+- Updated My Resume to the newly uploaded P2622009_GLIM-G.pdf, enlarged the header name responsively from 14px to a 35px desktop maximum, shifted the palette to a lighter soft navy-blue charcoal, and reduced spacing and display scale for a shorter page
+- Removed the Hero kicker wrapper and its remaining decorative spans so the headline starts cleanly
 - Tightened vertical section pacing, moved Musafir and SPMS into equal columns, and made Bayer a separate full-width live-project spotlight
 - Updated Hero and About copy to first person
+- Removed the extra Hero kicker divider and category spans
+- Corrected the SFO experience period to APRIL 2023 - APRIL 2024 and the B.Tech. result to 73.5%, 2022
 - Removed the Hero visual header, coordinate labels and footer metadata so the uploaded profile photo remains a plain box
 
 ## Verification
